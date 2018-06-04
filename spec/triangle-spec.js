@@ -33,4 +33,9 @@ describe('Triangle', function() {  //suite
     var isoscelesTriangle = new Triangle(4, 4, 6);
     expect(isoscelesTriangle.checkType()).toEqual('isosceles triangle');
   });
+
+  it('should correctly determine whether the triangle is scalene', function() {
+    var scaleneTriangle = new Triangle(4, 5, 6);
+    expect(scaleneTriangle.checkType()).toEqual('scalene triangle');
+  });
 });
