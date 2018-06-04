@@ -28,4 +28,9 @@ describe('Triangle', function() {  //suite
     var equilateralTriangle = new Triangle(4, 4, 4);
     expect(equilateralTriangle.checkType()).toEqual('equilateral triangle');
   });
+
+  it('should correctly determine whether the triangle is isosceles', function() {
+    var isoscelesTriangle = new Triangle(4, 4, 6);
+    expect(isoscelesTriangle.checkType()).toEqual('isosceles triangle');
+  });
 });
