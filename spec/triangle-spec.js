@@ -7,6 +7,10 @@ describe('Triangle', function() {  //suite
     reusableTriangle = new Triangle(5, 5, 5);
   });
 
+  it('should show how beforeEach() works', function() {
+    console.log(reusableTriangle);
+  });
+
   it('should test whether a Triangle has three sides', function() { //spec
     var triangle = new Triangle(3, 4, 5);
     expect(triangle.side1).toEqual(3); //expectation and matcher
@@ -20,7 +24,8 @@ describe('Triangle', function() {  //suite
       expect(notTriangle.checkType()).toEqual('not a triangle');
     });
 
-  it('should show how beforeEach() works', function() {
-    console.log(reusableTriangle);
+  it('should correctly determine whether the triangle is equilateral', function() {
+    var equilateralTriangle = new Triangle(4, 4, 4);
+    expect(equilateralTriangle.checkType()).toEqual('equilateral triangle');
   });
 });
