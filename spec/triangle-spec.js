@@ -1,9 +1,15 @@
 import { Triangle } from './../src/triangle.js';
 
-describe('Triangle', function() {
-  it('should test whether a Triangle has three sides', function() {
+describe('Triangle', function() {  //suite
+  var reusableTriangle;
+
+  beforeEach(function() {
+    reusableTriangle = new Triangle(5, 5, 5);
+  });
+
+  it('should test whether a Triangle has three sides', function() { //spec
     var triangle = new Triangle(3, 4, 5);
-    expect(triangle.side1).toEqual(3);
+    expect(triangle.side1).toEqual(3); //expectation and matcher
     expect(triangle.side2).toEqual(4);
     expect(triangle.side3).not.toEqual(6);
   });
@@ -13,4 +19,8 @@ describe('Triangle', function() {
       var notTriangle = new Triangle(3, 9, 22);
       expect(notTriangle.checkType()).toEqual('not a triangle');
     });
+
+  it('should show how beforeEach() works', function() {
+    console.log(reusableTriangle);
+  });
 });
