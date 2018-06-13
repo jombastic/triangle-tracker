@@ -7,26 +7,26 @@
     <div class="container">
       <h1>Triangle tracker</h1>
 
-      <form id="triangle">
+      <form id="triangle" novalidate>
         <div class="row">
           <div class="col-md-4">
             <div class="form-group">
               <label for="side-a">Side a</label>
-              <input type="number" class="form-control" id="side-a" />
+              <input type="number" class="form-control" id="side-a" required />
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="form-group">
               <label for="side-b">Side a</label>
-              <input type="number" class="form-control" id="side-b" />
+              <input type="number" class="form-control" id="side-b" required />
             </div>
           </div>
 
           <div class="col-md-4">
             <div class="form-group">
               <label for="side-c">Side c</label>
-              <input type="number" class="form-control" id="side-c" />
+              <input type="number" class="form-control" id="side-c" required />
             </div>
           </div>
         </div>
@@ -35,7 +35,7 @@
       </form>
 
       <div id="result">
-        <p>The sides form a <span class="triangle-type"></span></p>
+        <p>The sides <span class="triangle-type"></span></p>
       </div>
     </div>
   </body>

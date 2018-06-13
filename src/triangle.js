@@ -8,14 +8,14 @@ Triangle.prototype.checkType = function () {
   if ((this.side1 + this.side2 <= this.side3) ||
   (this.side2 + this.side2 <= this.side1) ||
   (this.side1 + this.side3 <= this.side2)) {
-    return "not a triangle";
+    return "don't form a triangle";
   } else if ((this.side1 === this.side2) && (this.side1 === this.side3)) {
-    return "equilateral triangle";
+    return "form an equilateral triangle";
   } else if ((this.side1 === this.side2) || (this.side1 === this.side3) ||
   (this.side2 === this.side3)) {
-    return "isosceles triangle";
+    return "form an isosceles triangle";
   } else if ((this.side1 !== this.side2) && (this.side1 !== this.side3) &&
   (this.side2 !== this.side3)) {
-    return "scalene triangle";
+    return "form a scalene triangle";
   }
 };

@@ -8,19 +8,17 @@ $(function() {
   $("form#triangle").submit(function(event) {
     event.preventDefault();
 
-    var sideA = parseInt($("#side-a").val());
-    var sideB = parseInt($("#side-b").val());
-    var sideC = parseInt($("#side-c").val());
-
-    if (sideA && sideB && sideC) {
+    if ($("#triangle")[0].checkValidity() === false) {
+      $("#triangle").addClass("was-validated");
+    } else {
+      var sideA = parseInt($("#side-a").val());
+      var sideB = parseInt($("#side-b").val());
+      var sideC = parseInt($("#side-c").val());
       var triangle = new Triangle(sideA, sideB, sideC);
       var triangleType = triangle.checkType();
 
       $(".triangle-type").text(triangleType);
-    } else {
-      $(".triangle-type").text("n cicka");
+      $("#result").show();
     }
-
-    $("#result").show();
   });
 });
